@@ -27,3 +27,18 @@ if a == "x" && sign == "+" && b.to_i >= c.to_i
 end
 
  # なぜか一個網羅できていない
+a, b = gets.chomp.split(" ").map(&:to_i), gets.chomp.split(" ").map(&:to_i)
+
+c = a[0]*a[1]
+d = a[2]/c.to_r 
+
+e = b[0]*b[1]
+f = b[2]/e.to_r 
+
+if d < f
+    puts a.join(" ")
+    elsif d > f
+    puts b.join(" ")
+    elsif d == f
+    puts "DRAW"
+end
