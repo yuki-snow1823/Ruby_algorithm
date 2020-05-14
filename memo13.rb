@@ -22,8 +22,9 @@ dateクラスの今月のカレンダーを出力、ただし
 
 （１）今月の最終日をdateクラスを利用して出力しなさい。
 （２）あなたは学習をする間、毎日１問の問題を必ず解くことに決めました。
-ただし、日付に３がつく日は２問、素数の日は３問を解くことにしました。
-初日から学習を開始した場合、今月は何問の問題を解くことができるでしょう？
+　　　また、日付に４がつく日は２問、素数の日は３問を解くことにしました。
+　　　初日から学習を開始した場合、今月は何問の問題を解くことができるでしょう？
+　　　※但し、primeクラスのメソッドを使用せずに解くこと。
 （３）今月のカレンダーを次のような形式で出力してください。（右寄せ曜日対応）
 
 =end
@@ -37,6 +38,7 @@ lastday = Date.new(2020, 5 , -1).day
 count = 0
 
 def prime?(num)
+  return false if num == 1 
   (2..num).each do |i|
     if num % i == 0 && num == i
       return true
@@ -47,11 +49,14 @@ def prime?(num)
 end
 
 (1..lastday).to_a.each do |day|
-  # if day.to_s.split("").include?("4")
-  #   count += 3
-  if prime?(day)
+  if day.to_s.split("").include?("4")
+    count += 4
+  elsif prime?(day)
     count += 2
+  else
+    count += 1
   end
 end
-
 p count
+
+# 
