@@ -8,3 +8,14 @@ elsif degree >= 25 || humid <= 40
 else
     puts "No"
 end
+
+arr = gets.chomp.split("+")
+
+answer = []
+arr.each do |f|
+    ten = f.count("<")
+    one = f.count("/")
+    number = 10 * ten + one
+    answer << number
+end
+p answer.sum
