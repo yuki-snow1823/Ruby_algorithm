@@ -32,3 +32,5 @@ p start_data[0] * start_data[1] - ( (start_data[0] - finish_data[0]) * (start_da
 elsif finish_data[0] < 0 && finish_data[1] > 0
 p start_data[1] * start_data[0] - ( (start_data[1] - finish_data[1]) * (start_data[0] + finish_data[0]) )
 end
+
+# p gets.split(" ").map(&:to_i).sort[1]
