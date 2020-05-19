@@ -11,3 +11,7 @@ elsif result.include?("paper") && result.include?("scissors") && !result.include
 else
     puts "draw"
 end
+
+numbers = gets.split(" ").map(&:to_i)
+
+(1..gets.to_i).map{gets.split(" ").map(&:to_i)}.each {|f| p (f & numbers).count}
