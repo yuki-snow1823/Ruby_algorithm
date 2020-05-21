@@ -41,3 +41,23 @@ answer.each do |num|
 end
 
 p last_answer.sum
+
+# 複数このデータを取得して処理を分ける場合
+data = (1..gets.to_i).map{gets.chomp.split(" ")}
+data_A,data_B = 0,0
+
+data.each do |f,g,h|
+    if f =="SET"
+        if g =="1"
+            data_A = h.to_i
+        else
+            data_B = h.to_i
+        end
+    elsif f =="ADD"
+        data_B = data_A + g.to_i
+    else
+        data_B = data_A - g.to_i
+    end 
+end
+
+puts "#{data_A} #{data_B}"
