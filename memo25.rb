@@ -61,3 +61,24 @@ data.each do |f,g,h|
 end
 
 puts "#{data_A} #{data_B}"
+
+
+# 回転処理
+data = gets.split(" ")
+
+correct = data[1].split("")
+miss = data[2].split("")
+count = 0
+
+if correct == miss
+    return puts 0
+end
+    
+loop do
+    m = miss.shift
+    miss << m
+    count += 1
+    break if miss.join("") == correct.join("")
+end
+
+p count
