@@ -34,4 +34,4 @@ work.each do |s,e|
     else
         p midnight * (e - s) 
     end
-end
+end 
