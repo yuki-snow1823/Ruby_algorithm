@@ -46,3 +46,5 @@ end
 
 
 # 辞書順ソート
+data = gets.chomp.split(" ").map(&:to_i)
+puts gets.chomp.split(" ").sort_by {|array| array.size}.sort.each_slice(data[1]).to_a[data[2]-1]
