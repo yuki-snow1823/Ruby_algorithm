@@ -43,3 +43,6 @@ else
     puts sort_ab[1]
     puts sort_ab[0]
 end
+
+
+# 辞書順ソート
