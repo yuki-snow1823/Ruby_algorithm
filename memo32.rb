@@ -16,6 +16,8 @@ end
 # 選んだ日付(dates[i])からN日分の合計を取る。
 # その合計が最も小さい時のdates[i]が答えとなる旅行初日(answer_first_date)
 
+# ここまで理解。
+
 # ひとまずは配列の最初の日付とそこから旅行日数分の要素の合計を入れておく。
 answer_first_date = dates[0]
 minimum_amount = chances_of_rain.slice(0, N).sum    # .slice(s, l)は配列のs番目の要素からl個を配列として抜き出す。例： [2, 3, 4, 5, 6].slice(1, 3) = [3, 4, 5]
