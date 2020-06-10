@@ -21,7 +21,7 @@ total = 0
 # それ自体の半分の数までしか増やさない。なぜなら、#2
   for i in 1..num/2 do
     d = num % i
-    if d == 0
+    if d == 0 # 割り切れたらという意味
       total += 1
     end
   end
