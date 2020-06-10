@@ -7,7 +7,7 @@ odd.zip(even) do |x, y|
   puts y
 end
 
-# 範囲を配列にする方法
+# 範囲を配列にする方法 文字も可能
 @secret_key = ("A".."Z").to_a
 
 # ./memo1で標準入力を配列に入れていたが、取得しつつ配列にする方法

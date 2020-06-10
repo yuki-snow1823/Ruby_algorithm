@@ -7,6 +7,7 @@
 # p b.ceil
 
 # 複数行の取得
+# 行単位での取得になるgetとは末尾が変わるだけの違い
 line = readlines
 len = line.length
 i = 0
